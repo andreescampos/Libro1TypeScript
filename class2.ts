@@ -1,35 +1,32 @@
 class Persona {
-    //private nombre: string;
-    nombre:string;
-    constructor(theName: string) {
+    private nombre: string;
+    protected edad: number;
+    constructor(theName: string, laEdad:number) {
         this.nombre = theName;
+        this.edad = laEdad;
     }
     introduceSelf() {
         console.log("Hola, yo soy " + this.nombre + "!");
     }
 }
  
-let personA = new Persona("Sally");
- 
-personA.introduceSelf();
-
-personA.nombre = "Mindy";
- 
-personA.introduceSelf();
-
 
 class Amigo extends Persona {
     anios_conocido: number;
-    constructor(nombre: string, anios_conocido: number) {
-        super(nombre);
+    constructor(nombre: string, edad:number, anios_conocido: number) {
+        super(nombre, edad);
         this.anios_conocido = anios_conocido;
     }
     timeKnown() {
         console.log("Hemos sido amigos por " + this.anios_conocido + " años.")
     }
+    amigosDesde(){
+        let firstAge = this.edad - this.anios_conocido;
+        console.log(`Hemos sido amigos desde que tenia ${firstAge} years old.`)
+    }   
 }
- 
-let friendA = new Amigo("Jacob", 6);
+
+let friendA = new Amigo("William", 19, 8);
  
 friendA.introduceSelf();
  
