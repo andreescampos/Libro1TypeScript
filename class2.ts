@@ -1,5 +1,6 @@
 class Persona {
-    nombre: string;
+    //private nombre: string;
+    nombre:string;
     constructor(theName: string) {
         this.nombre = theName;
     }
@@ -9,5 +10,9 @@ class Persona {
 }
  
 let personA = new Persona("Sally");
+ 
+personA.introduceSelf();
+
+personA.nombre = "Mindy";
  
 personA.introduceSelf();
