@@ -17,5 +17,7 @@ var tanque = {
 };
 // Correcto
 tanque.vida = 95;
-// Incorrecto porque daño es de solo lectura
-//tanque.danio = 10;
+var tankHit = function (tankName, damageDone) {
+    tankName.vida -= damageDone;
+    return tankName.vida;
+};

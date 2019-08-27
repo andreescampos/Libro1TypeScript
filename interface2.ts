@@ -35,3 +35,7 @@ let thirdLake: Lakes = {
     countries: ['Russia'],
     frozen: ['January', 'February', 'March', 'April', 'May']
 }
+
+
+
+

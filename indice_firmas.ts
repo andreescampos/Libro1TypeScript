@@ -41,3 +41,13 @@ tanque.vida = 95;
  
 // Incorrecto porque daño es de solo lectura
 //tanque.danio = 10;
+
+
+interface EnemyHit {
+    (name: Enemy, damageDone: number): number;
+}
+ 
+let tankHit: EnemyHit = function(tankName: Enemy, damageDone: number) {
+    tankName.vida -= damageDone;
+    return tankName.vida;
+}
