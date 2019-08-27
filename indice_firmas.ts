@@ -20,3 +20,24 @@ let fourthLake: Lakes = {
     kalemie: 'Congo',
     bujumbura: 'Burundi'
 }
+
+interface Enemy {
+    readonly tamaño: number,
+    vida: number,
+    rango: number,
+    readonly danio: number
+}
+ 
+let tanque: Enemy = {
+    tamaño: 50,
+    vida: 100,
+    rango: 60,
+    danio: 12
+}
+
+ 
+// Correcto
+tanque.vida = 95;
+ 
+// Incorrecto porque daño es de solo lectura
+//tanque.danio = 10;

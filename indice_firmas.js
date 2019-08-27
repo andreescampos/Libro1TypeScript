@@ -9,3 +9,13 @@ var fourthLake = {
     kalemie: 'Congo',
     bujumbura: 'Burundi'
 };
+var tanque = {
+    tamaño: 50,
+    vida: 100,
+    rango: 60,
+    danio: 12
+};
+// Correcto
+tanque.vida = 95;
+// Incorrecto porque daño es de solo lectura
+//tanque.danio = 10;
