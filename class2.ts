@@ -1,12 +1,12 @@
 class Persona {
-    private nombre: string;
+    private name: string;
     protected edad: number;
     constructor(theName: string, laEdad:number) {
-        this.nombre = theName;
+        this.name = theName;
         this.edad = laEdad;
     }
     introduceSelf() {
-        console.log("Hola, yo soy " + this.nombre + "!");
+        console.log("Hola, yo soy " + this.name + "!");
     }
 }
  
